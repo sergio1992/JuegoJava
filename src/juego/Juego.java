@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import control.Teclado;
 import graficos.Pantalla;
 import mapa.Mapa;
+import mapa.MapaCargado;
 import mapa.MapaGenerado;
 
 public class Juego extends Canvas implements Runnable{
@@ -47,7 +48,8 @@ public class Juego extends Canvas implements Runnable{
 	private Juego(){
 		setPreferredSize(new Dimension(ANCHO, ALTO));
 		pantalla = new Pantalla(ANCHO, ALTO);
-		mapa = new MapaGenerado(128,128);
+//		mapa = new MapaGenerado(128,128);
+		mapa = new MapaCargado("/mapas/minimapa.png");
 		teclado = new Teclado();
 		addKeyListener(teclado);
 		
@@ -123,6 +125,7 @@ public class Juego extends Canvas implements Runnable{
 //			pixeles[i] = pantalla.pixeles[i];
 //		}
 		System.arraycopy(pantalla.pixeles, 0, pixeles, 0, pixeles.length);
+	
 		
 		Graphics g = estrategia.getDrawGraphics();
 		g.drawImage(imagen, 0, 0, getWidth(),getHeight(),null);
