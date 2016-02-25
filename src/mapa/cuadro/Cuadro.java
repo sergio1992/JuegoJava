@@ -3,7 +3,7 @@ package mapa.cuadro;
 import graficos.Pantalla;
 import graficos.Sprite;
 
-public abstract class Cuadro {
+public  class Cuadro {
 	public int x;
 	public int y;
 	public static final int LADO =32;
