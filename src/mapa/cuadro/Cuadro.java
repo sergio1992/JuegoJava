@@ -9,10 +9,10 @@ public  class Cuadro {
 	public static final int LADO =32;
 	public Sprite sprite;
 	//COLECCION DE CUADROS
-	public static final Cuadro VACIO = new CuadroVacio(Sprite.VACIO);
-	public static final Cuadro ASFALTO =  new CuadroAsfalto(Sprite.ASFALTO);
-	public static final Cuadro TIERRA = new CuadroTierra(Sprite.TIERRA);
-	public static final Cuadro TIERRA2 = new CuadroTierra2(Sprite.TIERRA2);
+	public static final Cuadro VACIO = new Cuadro(Sprite.VACIO);
+	public static final Cuadro ASFALTO =  new Cuadro(Sprite.ASFALTO);
+	public static final Cuadro TIERRA = new Cuadro(Sprite.TIERRA);
+	public static final Cuadro TIERRA2 = new Cuadro(Sprite.TIERRA2);
 	//FIN COLECCION DE CUADROS
 	
 	public Cuadro(Sprite sprite){
